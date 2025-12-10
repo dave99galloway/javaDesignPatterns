@@ -5,5 +5,6 @@ package com.designpatterns.behavioral.visitor;
  */
 public interface ShapeVisitor {
     void visit(CircleElement circle);
+
     void visit(RectangleElement rectangle);
 }

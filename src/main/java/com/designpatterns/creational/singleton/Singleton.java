@@ -6,17 +6,17 @@ package com.designpatterns.creational.singleton;
  */
 public enum Singleton {
     INSTANCE;
-    
+
     private String data;
-    
+
     public void setData(String data) {
         this.data = data;
     }
-    
+
     public String getData() {
         return data;
     }
-    
+
     public String performOperation() {
         return "Singleton operation executed with data: " + data;
     }

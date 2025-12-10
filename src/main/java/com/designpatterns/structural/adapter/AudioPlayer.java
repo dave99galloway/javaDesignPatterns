@@ -2,7 +2,7 @@ package com.designpatterns.structural.adapter;
 
 public class AudioPlayer implements MediaPlayer {
     private MediaAdapter mediaAdapter;
-    
+
     @Override
     public void play(String audioType, String fileName) {
         if (audioType.equalsIgnoreCase("mp3")) {

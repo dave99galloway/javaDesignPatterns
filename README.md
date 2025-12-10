@@ -24,6 +24,7 @@ This project serves as a practical reference and learning resource for common so
 ## 🏗️ Design Patterns Implemented
 
 ### Creational Patterns (5)
+
 - **Singleton** - Ensures a class has only one instance
 - **Factory Method** - Creates objects without specifying exact classes
 - **Abstract Factory** - Creates families of related objects
@@ -31,6 +32,7 @@ This project serves as a practical reference and learning resource for common so
 - **Prototype** - Clones objects instead of creating new ones
 
 ### Structural Patterns (7)
+
 - **Adapter** - Makes incompatible interfaces work together
 - **Bridge** - Separates abstraction from implementation
 - **Composite** - Treats individual objects and compositions uniformly
@@ -40,6 +42,7 @@ This project serves as a practical reference and learning resource for common so
 - **Proxy** - Provides a placeholder for another object
 
 ### Behavioral Patterns (11)
+
 - **Strategy** - Defines a family of interchangeable algorithms
 - **Observer** - Notifies dependent objects of state changes
 - **Command** - Encapsulates requests as objects
@@ -53,6 +56,7 @@ This project serves as a practical reference and learning resource for common so
 - **Interpreter** - Defines a grammar and interprets sentences
 
 ### Additional Common Patterns (3)
+
 - **Repository** - Abstracts data access logic
 - **Dependency Injection** - Inverts control of dependencies
 - **Object Pool** - Reuses expensive objects for better performance
@@ -128,58 +132,69 @@ cd javaDesignPatterns
 The project provides separate commands for different test suites:
 
 ### Run All Tests
+
 ```bash
 ./gradlew build
 ```
 
 ### Run JUnit Unit Tests Only
+
 ```bash
 ./gradlew unitTest
 ```
+
 - Tests located in: `src/test/java/`
 - Uses JUnit 5 with AssertJ assertions
 - Fast execution, ideal for TDD
 
 ### Run Cucumber BDD Tests Only
+
 ```bash
 ./gradlew cucumber
 ```
+
 - Feature files in: `src/cucumber/resources/`
 - Step definitions in: `src/cucumber/java/`
 - Uses Cucumber with AssertJ assertions
 - Generates HTML reports in: `build/reports/cucumber/`
 
 ### Run Standard Test Task
+
 ```bash
 ./gradlew test
 ```
+
 - Runs JUnit tests from `src/test/java/`
 
 ## 🔨 Build Commands
 
-| Command | Description |
-|---------|-------------|
-| `./gradlew build` | Compiles code and runs all tests |
-| `./gradlew clean` | Removes build directory |
-| `./gradlew test` | Runs JUnit tests |
+| Command              | Description                      |
+| -------------------- | -------------------------------- |
+| `./gradlew build`    | Compiles code and runs all tests |
+| `./gradlew clean`    | Removes build directory          |
+| `./gradlew test`     | Runs JUnit tests                 |
 | `./gradlew unitTest` | Runs JUnit tests (explicit task) |
-| `./gradlew cucumber` | Runs Cucumber BDD tests |
-| `./gradlew check` | Runs all verification tasks |
-| `./gradlew tasks` | Lists all available tasks |
+| `./gradlew cucumber` | Runs Cucumber BDD tests          |
+| `./gradlew check`    | Runs all verification tasks      |
+| `./gradlew tasks`    | Lists all available tasks        |
 
 ## 📦 Requirements
 
 ### Java Version
+
 - Java 17 or higher required
 
 ### Dependencies
+
 All dependencies are managed by Gradle:
 
 **Main Dependencies:**
+
 - SLF4J 2.0.9 (Logging API)
 - Logback 1.4.11 (Logging implementation)
 
 **Test Dependencies:**
+
 - JUnit Jupiter 5.10.1 (Unit testing framework)
 - AssertJ 3.24.2 (Fluent assertion library)
 - Cucumber 7.14.1 (BDD framework)
@@ -188,6 +203,7 @@ All dependencies are managed by Gradle:
 ## 📊 Test Results
 
 After running tests, view reports at:
+
 - **JUnit Tests**: `build/reports/tests/test/index.html`
 - **Unit Tests**: `build/reports/tests/unitTest/index.html`
 - **Cucumber Tests**: `build/reports/cucumber/cucumber.html`
@@ -195,6 +211,7 @@ After running tests, view reports at:
 ## 🎓 Learning Resources
 
 Each pattern implementation includes:
+
 - Clear, documented code examples
 - Real-world use cases
 - JUnit tests demonstrating usage
@@ -233,6 +250,7 @@ cart.checkout(100.0);
 ## 🤝 Contributing
 
 This is a learning playground. Feel free to:
+
 - Add more design patterns
 - Improve existing implementations
 - Add more test scenarios

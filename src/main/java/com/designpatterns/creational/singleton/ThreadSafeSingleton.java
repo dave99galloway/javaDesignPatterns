@@ -6,11 +6,11 @@ package com.designpatterns.creational.singleton;
 public class ThreadSafeSingleton {
     private static volatile ThreadSafeSingleton instance;
     private String data;
-    
+
     private ThreadSafeSingleton() {
         // Private constructor to prevent instantiation
     }
-    
+
     public static ThreadSafeSingleton getInstance() {
         if (instance == null) {
             synchronized (ThreadSafeSingleton.class) {
@@ -21,11 +21,11 @@ public class ThreadSafeSingleton {
         }
         return instance;
     }
-    
+
     public void setData(String data) {
         this.data = data;
     }
-    
+
     public String getData() {
         return data;
     }

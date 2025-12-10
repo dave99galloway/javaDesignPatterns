@@ -7,7 +7,7 @@ public class ProductFactory {
     public enum ProductType {
         TYPE_A, TYPE_B
     }
-    
+
     public static Product createProduct(ProductType type) {
         return switch (type) {
             case TYPE_A -> new ConcreteProductA();

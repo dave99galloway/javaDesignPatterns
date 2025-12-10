@@ -5,7 +5,7 @@ public class SimpleCoffee implements Coffee {
     public String getDescription() {
         return "Simple Coffee";
     }
-    
+
     @Override
     public double getCost() {
         return 2.0;

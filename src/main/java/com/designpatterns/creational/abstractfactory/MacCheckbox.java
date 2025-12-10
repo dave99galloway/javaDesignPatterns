@@ -5,12 +5,12 @@ public class MacCheckbox implements Checkbox {
     public void render() {
         System.out.println("Rendering Mac checkbox");
     }
-    
+
     @Override
     public void toggle() {
         System.out.println("Mac checkbox toggled");
     }
-    
+
     @Override
     public String getStyle() {
         return "Mac";

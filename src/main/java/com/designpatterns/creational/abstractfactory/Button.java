@@ -5,6 +5,8 @@ package com.designpatterns.creational.abstractfactory;
  */
 public interface Button {
     void render();
+
     void onClick();
+
     String getStyle();
 }

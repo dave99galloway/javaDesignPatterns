@@ -7,8 +7,12 @@ import java.util.*;
  */
 public interface Repository<T> {
     void save(T entity);
+
     Optional<T> findById(String id);
+
     List<T> findAll();
+
     void delete(String id);
+
     boolean exists(String id);
 }

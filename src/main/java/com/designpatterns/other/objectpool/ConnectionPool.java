@@ -10,11 +10,11 @@ public class ConnectionPool {
     private List<Connection> available = new ArrayList<>();
     private List<Connection> inUse = new ArrayList<>();
     private int maxPoolSize;
-    
+
     public ConnectionPool(int maxPoolSize) {
         this.maxPoolSize = maxPoolSize;
     }
-    
+
     public synchronized Connection acquire() {
         if (available.isEmpty()) {
             if (inUse.size() < maxPoolSize) {
@@ -30,16 +30,16 @@ public class ConnectionPool {
             return conn;
         }
     }
-    
+
     public synchronized void release(Connection conn) {
         inUse.remove(conn);
         available.add(conn);
     }
-    
+
     public int getAvailableCount() {
         return available.size();
     }
-    
+
     public int getInUseCount() {
         return inUse.size();
     }

@@ -5,7 +5,10 @@ package com.designpatterns.behavioral.state;
  */
 public interface State {
     void insertCoin();
+
     void ejectCoin();
+
     void dispense();
+
     String getStateName();
 }

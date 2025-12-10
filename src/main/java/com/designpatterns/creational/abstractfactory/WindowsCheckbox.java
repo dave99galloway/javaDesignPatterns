@@ -5,12 +5,12 @@ public class WindowsCheckbox implements Checkbox {
     public void render() {
         System.out.println("Rendering Windows checkbox");
     }
-    
+
     @Override
     public void toggle() {
         System.out.println("Windows checkbox toggled");
     }
-    
+
     @Override
     public String getStyle() {
         return "Windows";

@@ -7,13 +7,13 @@ public class HomeTheaterFacade {
     private DVDPlayer dvdPlayer;
     private Amplifier amplifier;
     private Projector projector;
-    
+
     public HomeTheaterFacade(DVDPlayer dvdPlayer, Amplifier amplifier, Projector projector) {
         this.dvdPlayer = dvdPlayer;
         this.amplifier = amplifier;
         this.projector = projector;
     }
-    
+
     public void watchMovie(String movie) {
         System.out.println("Get ready to watch a movie...");
         projector.on();
@@ -23,7 +23,7 @@ public class HomeTheaterFacade {
         dvdPlayer.on();
         dvdPlayer.play(movie);
     }
-    
+
     public void endMovie() {
         System.out.println("Shutting down home theater...");
         dvdPlayer.off();

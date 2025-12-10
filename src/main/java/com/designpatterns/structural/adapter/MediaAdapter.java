@@ -1,11 +1,12 @@
 package com.designpatterns.structural.adapter;
 
 /**
- * Adapter pattern implementation to adapt AdvancedMediaPlayer to MediaPlayer interface.
+ * Adapter pattern implementation to adapt AdvancedMediaPlayer to MediaPlayer
+ * interface.
  */
 public class MediaAdapter implements MediaPlayer {
     private AdvancedMediaPlayer advancedPlayer;
-    
+
     public MediaAdapter(String audioType) {
         if (audioType.equalsIgnoreCase("vlc")) {
             advancedPlayer = new VlcPlayer();
@@ -13,7 +14,7 @@ public class MediaAdapter implements MediaPlayer {
             advancedPlayer = new Mp4Player();
         }
     }
-    
+
     @Override
     public void play(String audioType, String fileName) {
         if (audioType.equalsIgnoreCase("vlc")) {
