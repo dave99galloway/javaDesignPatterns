@@ -1,9 +1,12 @@
 package com.designpatterns.behavioral.command;
 
-public class LightOnCommand implements Command {
-    private Light light;
+import javax.annotation.Nonnull;
 
-    public LightOnCommand(Light light) {
+public class LightOnCommand implements Command {
+    @Nonnull
+    private final Light light;
+
+    public LightOnCommand(@Nonnull Light light) {
         this.light = light;
     }
 

@@ -1,8 +1,8 @@
 package com.designpatterns.behavioral.interpreter;
 
 public class AddExpression implements Expression {
-    private Expression left;
-    private Expression right;
+    private final Expression left;
+    private final Expression right;
 
     public AddExpression(Expression left, Expression right) {
         this.left = left;
