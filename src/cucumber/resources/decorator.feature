@@ -20,3 +20,9 @@ Feature: Decorator Pattern
     And I add sugar
     Then the description should be "Simple Coffee, Milk, Sugar"
     And the cost should be 2.7
+
+  Scenario: Coffee with sugar
+    Given I order a simple coffee
+    When I add sugar
+    Then the description should be "Simple Coffee, Sugar"
+    And the cost should be 2.2
