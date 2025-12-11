@@ -269,3 +269,12 @@ This project is created for educational purposes.
 ---
 
 **Happy Learning! 🎉**
+
+
+## ToDo:
+
+- Add examples illustrating 
+  - OOP principles
+  - Data Structures in Java
+  - Java Primitive types comparison
+  - 

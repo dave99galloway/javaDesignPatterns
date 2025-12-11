@@ -6,8 +6,8 @@ group = 'com.designpatterns'
 version = '1.0-SNAPSHOT'
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
 
 repositories {
@@ -48,7 +48,7 @@ configurations {
 dependencies {
     // Main dependencies
     implementation 'org.slf4j:slf4j-api:2.0.9'
-    implementation 'ch.qos.logback:logback-classic:1.4.11'
+    implementation 'ch.qos.logback:logback-classic:1.5.13'
     
     // JUnit 5 dependencies
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.1'

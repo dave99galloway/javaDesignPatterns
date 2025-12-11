@@ -25,7 +25,7 @@ public class ConnectionPool {
                 throw new RuntimeException("No connections available");
             }
         } else {
-            Connection conn = available.remove(available.size() - 1);
+            Connection conn = available.removeLast();
             inUse.add(conn);
             return conn;
         }
