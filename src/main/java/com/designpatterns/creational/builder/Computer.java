@@ -64,6 +64,16 @@ public class Computer {
         private boolean hasWifi;
         private boolean hasBluetooth;
 
+        public Builder fromComputer(Computer computer) {
+            this.cpu = computer.cpu;
+            this.ram = computer.ram;
+            this.storage = computer.storage;
+            this.gpu = computer.gpu;
+            this.hasWifi = computer.hasWifi;
+            this.hasBluetooth = computer.hasBluetooth;
+            return this;
+        }
+
         public Builder cpu(String cpu) {
             this.cpu = cpu;
             return this;

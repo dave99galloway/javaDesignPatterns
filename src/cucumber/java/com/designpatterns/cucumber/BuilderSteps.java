@@ -2,9 +2,12 @@ package com.designpatterns.cucumber;
 
 import com.designpatterns.creational.builder.Computer;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
-import static org.assertj.core.api.Assertions.*;
+import io.cucumber.java.en.When;
+
+import java.util.List;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class BuilderSteps {
     private Computer.Builder builder;
@@ -63,5 +66,22 @@ public class BuilderSteps {
     @Then("the computer should have WiFi enabled")
     public void theComputerShouldHaveWiFiEnabled() {
         assertThat(computer.hasWifi()).isTrue();
+    }
+
+    @Given("I have these specs for a computer")
+    public void iHaveTheseSpecsForAComputer(List<Computer> computerSpecs) {
+        // having a stateful step definition structure hurts us here but this will do for now
+        for (Computer spec : computerSpecs) {
+            builder = builder.fromComputer(spec);
+        }
+
+    }
+
+    @Then("the computer should have these specs")
+    public void theComputerShouldHaveTheseSpecs(List<Computer> computerSpecs) {
+        // having a stateful step definition structure hurts us here but this will do for now
+        for (Computer spec : computerSpecs) {
+            assertThat(spec).usingRecursiveComparison().isEqualTo(computer);
+        }
     }
 }
