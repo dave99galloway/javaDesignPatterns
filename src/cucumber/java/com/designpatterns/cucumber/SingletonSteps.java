@@ -2,9 +2,10 @@ package com.designpatterns.cucumber;
 
 import com.designpatterns.creational.singleton.Singleton;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
-import static org.assertj.core.api.Assertions.*;
+import io.cucumber.java.en.When;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class SingletonSteps {
     private Singleton instance1;
@@ -29,6 +30,7 @@ public class SingletonSteps {
     @Then("both instances should be the same")
     public void bothInstancesShouldBeTheSame() {
         assertThat(instance1).isSameAs(instance2);
+        assertThat(instance1.equals(instance2)).isTrue();
     }
 
     @Then("the data should be {string}")

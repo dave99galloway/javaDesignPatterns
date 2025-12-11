@@ -3,7 +3,7 @@ package com.designpatterns.other.repository;
 import java.util.*;
 
 public class UserRepository implements Repository<User> {
-    private Map<String, User> database = new HashMap<>();
+    private final Map<String, User> database = new HashMap<>();
 
     @Override
     public void save(User user) {

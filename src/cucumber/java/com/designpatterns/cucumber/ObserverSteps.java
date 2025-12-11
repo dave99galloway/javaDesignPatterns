@@ -1,16 +1,19 @@
 package com.designpatterns.cucumber;
 
-import com.designpatterns.behavioral.observer.*;
+import com.designpatterns.behavioral.observer.NewsAgency;
+import com.designpatterns.behavioral.observer.NewsChannel;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
 import java.util.HashMap;
 import java.util.Map;
-import static org.assertj.core.api.Assertions.*;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class ObserverSteps {
     private NewsAgency agency;
-    private Map<String, NewsChannel> channels = new HashMap<>();
+    private final Map<String, NewsChannel> channels = new HashMap<>();
 
     @Given("a news agency exists")
     public void aNewsAgencyExists() {

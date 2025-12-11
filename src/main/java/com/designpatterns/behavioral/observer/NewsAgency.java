@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NewsAgency implements Subject {
-    private List<Observer> observers = new ArrayList<>();
+    private final List<Observer> observers = new ArrayList<>();
     private String news;
 
     @Override

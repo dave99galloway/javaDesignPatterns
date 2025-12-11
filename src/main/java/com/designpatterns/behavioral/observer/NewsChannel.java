@@ -1,7 +1,7 @@
 package com.designpatterns.behavioral.observer;
 
 public class NewsChannel implements Observer {
-    private String name;
+    private final String name;
     private String latestNews;
 
     public NewsChannel(String name) {
