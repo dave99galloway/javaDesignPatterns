@@ -1,7 +1,7 @@
 package com.designpatterns.behavioral.state;
 
 public class HasCoinState implements State {
-    private VendingMachine machine;
+    private final VendingMachine machine;
 
     public HasCoinState(VendingMachine machine) {
         this.machine = machine;

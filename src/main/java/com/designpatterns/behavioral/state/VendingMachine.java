@@ -4,8 +4,8 @@ package com.designpatterns.behavioral.state;
  * State pattern context representing a vending machine.
  */
 public class VendingMachine {
-    private State noCoinState;
-    private State hasCoinState;
+    private final State noCoinState;
+    private final State hasCoinState;
     private State currentState;
 
     public VendingMachine() {
