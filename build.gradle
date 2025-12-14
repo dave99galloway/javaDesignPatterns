@@ -71,6 +71,15 @@ dependencies {
     cucumberImplementation 'org.assertj:assertj-core:3.24.2'
 }
 
+// Enable preview features for Java 21+
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs.add('--enable-preview')
+}
+
+tasks.withType(Test).configureEach {
+    jvmArgs += '--enable-preview'
+}
+
 test {
     useJUnitPlatform()
     testLogging {
