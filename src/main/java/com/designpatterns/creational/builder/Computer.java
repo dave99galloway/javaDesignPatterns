@@ -46,14 +46,16 @@ public class Computer {
 
     @Override
     public String toString() {
-        return "Computer{" +
-                "cpu='" + cpu + '\'' +
-                ", ram='" + ram + '\'' +
-                ", storage='" + storage + '\'' +
-                ", gpu='" + gpu + '\'' +
-                ", hasWifi=" + hasWifi +
-                ", hasBluetooth=" + hasBluetooth +
-                '}';
+        return """
+                Computer{\
+                cpu='%s', \
+                ram='%s', \
+                storage='%s', \
+                gpu='%s', \
+                hasWifi=%b, \
+                hasBluetooth=%b\
+                }\
+                """.formatted(cpu, ram, storage, gpu, hasWifi, hasBluetooth);
     }
 
     public static class Builder {

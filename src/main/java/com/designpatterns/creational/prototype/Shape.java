@@ -21,6 +21,11 @@ public abstract class Shape implements Cloneable {
 
     public abstract Shape clone();
 
+    public static <T extends Shape> T clone(T proto) {
+        //noinspection unchecked
+        return (T) proto.clone();
+    }
+
     public String getColor() {
         return color;
     }

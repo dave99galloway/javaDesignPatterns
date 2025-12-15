@@ -25,3 +25,7 @@ Feature: Builder Pattern
     Then the computer should have these specs
       | CPU      | RAM  | Storage | GPU      | WiFi | Bluetooth |
       | Intel i9 | 32GB | 1TB SSD | RTX 4090 | true | true      |
+    And the computer should have this description
+    """
+    Computer{cpu='Intel i9', ram='32GB', storage='1TB SSD', gpu='RTX 4090', hasWifi=true, hasBluetooth=true}
+    """
