@@ -29,7 +29,7 @@ public class DataTableTransformer {
         if (entry.get("radius") != null) circle.setRadius(Integer.parseInt(entry.get("radius")));
         if (entry.get("x") != null) circle.setX(Integer.parseInt(entry.get("x")));
         if (entry.get("y") != null) circle.setY(Integer.parseInt(entry.get("y")));
-
+        circle.setColor(entry.get("color"));
         return circle;
 
     }
@@ -38,8 +38,9 @@ public class DataTableTransformer {
     @DataTableType
     public CircleUpdate updateEntry(Map<String, String> entry) {
         Optional<Integer> x = (entry.get("x") != null) ? Optional.of(Integer.parseInt(entry.get("x"))) : Optional.empty();
-        Optional<Integer> y = (entry.get("x") != null) ? Optional.of(Integer.parseInt(entry.get("x"))) : Optional.empty();
+        Optional<Integer> y = (entry.get("y") != null) ? Optional.of(Integer.parseInt(entry.get("y"))) : Optional.empty();
         Optional<Integer> radius = (entry.get("radius") != null) ? Optional.of(Integer.parseInt(entry.get("radius"))) : Optional.empty();
-        return new CircleUpdate(x, y, radius);
+        Optional<String> color = (entry.get("color") != null) ? Optional.of(entry.get("color")) : Optional.empty();
+        return new CircleUpdate(x, y, radius, color);
     }
 }
