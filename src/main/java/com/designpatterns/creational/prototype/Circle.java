@@ -13,6 +13,14 @@ public class Circle extends Shape {
         }
     }
 
+    public void update(CircleUpdate updates) {
+        if (updates != null) {
+            x = updates.x().orElse(x);
+            y = updates.y().orElse(y);
+            radius = updates.radius().orElse(radius);
+        }
+    }
+
     @Override
     public Shape clone() {
         return new Circle(this);

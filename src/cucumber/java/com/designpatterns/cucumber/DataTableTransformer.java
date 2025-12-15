@@ -2,9 +2,11 @@ package com.designpatterns.cucumber;
 
 import com.designpatterns.creational.builder.Computer;
 import com.designpatterns.creational.prototype.Circle;
+import com.designpatterns.creational.prototype.CircleUpdate;
 import io.cucumber.java.DataTableType;
 
 import java.util.Map;
+import java.util.Optional;
 
 @SuppressWarnings({"unused", "cucumberBinding"})
 public class DataTableTransformer {
@@ -24,11 +26,20 @@ public class DataTableTransformer {
     @DataTableType
     public Circle circleEntry(Map<String, String> entry) {
         var circle = new Circle();
-        circle.setRadius(Integer.parseInt(entry.get("radius")));
-        circle.setX(Integer.parseInt(entry.get("x")));
-        circle.setY(Integer.parseInt(entry.get("y")));
+        if (entry.get("radius") != null) circle.setRadius(Integer.parseInt(entry.get("radius")));
+        if (entry.get("x") != null) circle.setX(Integer.parseInt(entry.get("x")));
+        if (entry.get("y") != null) circle.setY(Integer.parseInt(entry.get("y")));
 
         return circle;
 
+    }
+
+    //CircleUpdate
+    @DataTableType
+    public CircleUpdate updateEntry(Map<String, String> entry) {
+        Optional<Integer> x = (entry.get("x") != null) ? Optional.of(Integer.parseInt(entry.get("x"))) : Optional.empty();
+        Optional<Integer> y = (entry.get("x") != null) ? Optional.of(Integer.parseInt(entry.get("x"))) : Optional.empty();
+        Optional<Integer> radius = (entry.get("radius") != null) ? Optional.of(Integer.parseInt(entry.get("radius"))) : Optional.empty();
+        return new CircleUpdate(x, y, radius);
     }
 }

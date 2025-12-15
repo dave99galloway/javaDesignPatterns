@@ -1,6 +1,7 @@
 package com.designpatterns.cucumber;
 
 import com.designpatterns.creational.prototype.Circle;
+import com.designpatterns.creational.prototype.CircleUpdate;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -18,6 +19,7 @@ public class PrototypeSteps {
         protoCircle = circle;
     }
 
+    @And("I have cloned the circle")
     @When("I clone the circle")
     public void iCloneTheCircle() {
         clonedCircle = Circle.clone(protoCircle);
@@ -34,4 +36,15 @@ public class PrototypeSteps {
         assertThat(protoCircle).usingRecursiveComparison().isEqualTo(circle);
         assertThat(clonedCircle).isNotEqualTo(circle);
     }
+
+    @When("I update the clone with these properties")
+    public void iUpdateTheCloneWithTheseProperties(CircleUpdate circleUpdate) {
+        clonedCircle.update(circleUpdate);
+    }
+
+//    @And("I have cloned the circle")
+//    public void iHaveClonedTheCircle() {
+//        // Write code here that turns the phrase above into concrete actions
+//        throw new PendingException();
+//    }
 }
